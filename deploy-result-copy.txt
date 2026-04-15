@@ -1,0 +1,9 @@
+[16:22:47] === Vercel 全自动部署 ===
+[16:22:48] Chrome 已连接
+[16:22:48] 打开 Vercel 登录...
+[16:23:22] 错误: page.screenshot: Timeout 30000ms exceeded.
+Call log:
+[2m  - taking page screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+
