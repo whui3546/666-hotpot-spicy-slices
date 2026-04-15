@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --brand-pink: #FF2D78;
+    --brand-pink-light: #FF6B9D;
+    --brand-pink-dark: #CC1F5E;
+    --brand-pink-soft: #FFF0F5;
+    --brand-gold: #FFD700;
+    --brand-gold-light: #FFE44D;
+    --brand-gold-dark: #CC9900;
+    --brand-black: #1A1A1A;
+    --brand-black-soft: #2D2D2D;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-pink);
+    --color-secondary: var(--brand-gold);
+    --color-accent: var(--brand-black);
+    --color-background: #FFFFFF;
+    --color-surface: var(--brand-pink-soft);
+    --color-text: var(--brand-black);
+    --color-text-muted: #6B7280;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-brand-black font-body antialiased;
+  }
+
+  /* RTL Support for Arabic */
+  [dir="rtl"] {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--brand-pink-soft);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--brand-pink);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-pink-dark);
+  }
+}
+
+@layer components {
+  /* Brand Button Styles */
+  .btn-primary {
+    @apply bg-brand-pink text-white px-8 py-4 rounded-full font-heading font-semibold 
+           transition-all duration-300 hover:bg-brand-pink-dark hover:scale-105 
+           hover:shadow-lg hover:shadow-brand-pink/30 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-brand-gold text-brand-black px-8 py-4 rounded-full font-heading font-semibold 
+           transition-all duration-300 hover:bg-brand-gold-dark hover:scale-105 
+           active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-brand-pink text-brand-pink px-8 py-4 rounded-full 
+           font-heading font-semibold transition-all duration-300 
+           hover:bg-brand-pink hover:text-white;
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Typography */
+  .heading-display {
+    @apply font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
+  }
+
+  .heading-section {
+    @apply font-heading text-3xl sm:text-4xl md:text-5xl font-bold;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-pink via-brand-gold to-brand-pink 
+           bg-clip-text text-transparent;
+  }
+
+  /* Card Styles */
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  /* Image Styles */
+  .img-cover {
+    @apply w-full h-full object-cover;
+  }
+
+  /* Swiper Customization */
+  .swiper-pagination-bullet {
+    @apply bg-brand-pink/50 w-3 h-3 transition-all duration-300;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-brand-pink w-8;
+  }
+
+  /* Gold Accent Line */
+  .gold-line {
+    @apply h-1 bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-gold rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
