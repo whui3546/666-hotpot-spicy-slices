@@ -1,0 +1,23 @@
+[16:50:10] === 创建 Token 推代码 ===
+[16:50:10] Chrome 已连接
+[16:50:21] URL: https://github.com/settings/tokens/new
+[16:50:21] 标题: New Personal Access Token (Classic)
+[16:50:21] 当前 URL: https://github.com/settings/tokens/new
+[16:50:21] 找到 input 元素数量: 9
+[16:50:21]   input[0]: id=query-builder-test name=query-builder-test placeholder=null
+[16:50:21]   input[1]: id=feedback name=feedback placeholder=null
+[16:50:21]   input[2]: id=custom_scope_name name=custom_scope_name placeholder=github-ruby
+[16:50:21]   input[3]: id=custom_scope_query name=custom_scope_query placeholder=(repo:mona/a OR repo:mona/b) AND lang:python
+[16:50:21]   input[4]: id=query-builder-test name=query-builder-test placeholder=null
+[16:50:21] 尝试填写 token 名称...
+[16:50:21] ✅ 名称已填 using: #oauth_access_description
+[16:50:21] 勾选 repo 权限...
+[16:50:23] ✅ repo 已勾选 using: input[value="repo"]
+[16:50:23] 点击生成 token...
+[16:50:26] ✅ 点击生成 using: button:has-text("Generate token")
+[16:50:34] 生成后 URL: https://github.com/settings/tokens
+[16:50:34] 生成后标题: Personal Access Tokens (Classic)
+[16:50:34] 获取 token 值...
+[16:50:34] ✅ 找到 token via #new-oauth-token: ghp_Mnc9DpX2Pu2...
+[16:50:34] Token 已保存到文件
+[16:50:34] 用 token 推送代码到 GitHub...
